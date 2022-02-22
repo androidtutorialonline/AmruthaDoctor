@@ -1463,10 +1463,10 @@ function sendmessage()
                                 application:"10",
                                 data:[
                                 {number:"09618088333",
-                                 message:"*Dr.Amrutha Skin and Hair Clinic Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""},
+                                 message:"*Dr.Poornima Skin and Laser Clinic Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""},
                                  {
       number:'91'+requestphone,
-      message:"*Dr.Amrutha Skin and Hair Clinic Appointment* \n*Doctor Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""
+      message:"*Dr.Poornima Skin and Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""
     }]});
                                 var xhr = new XMLHttpRequest();
                                 xhr.withCredentials = false;
@@ -1557,10 +1557,10 @@ xhr.send(data);
                                 application:"10",
                                 data:[
                                 {number:"09618088333",
-                                 message:"*Dr.Amrutha Skin & Hair Clinic Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""},
+                                 message:"*Dr.Poornima Skin & Laser Clinic Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""},
                                  {
       number:'91'+bookingphone,
-      message:"*Dr.Amrutha Skin & Hair Clinic Appointment* \n*Doctor Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""
+      message:"*Dr.Poornima Skin & Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""
     }]});
                                 var xhr = new XMLHttpRequest();
                                 xhr.withCredentials = false;
@@ -1670,10 +1670,10 @@ xhr.send(data);
                                 application:"10",
                                 data:[
                                 {number:"09618088333",
-                                 message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Amrutha Video Consultation  Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""},
+                                 message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation  Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""},
                                  {
       number:'91'+vbookingphone,
-      message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Amrutha Video Consultation Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""
+      message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""
     }]});
                                 var xhr = new XMLHttpRequest();
                                 xhr.withCredentials = false;
