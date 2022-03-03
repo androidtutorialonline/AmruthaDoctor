@@ -85,7 +85,7 @@ $(function () {
         };
     }
 
-        if (blocks.specialist2Carousel.length) {
+    if (blocks.specialist2Carousel.length) {
         blocks.specialist2Carousel.slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -147,15 +147,15 @@ $(function () {
             stickyNavHeight = 98,
             headerContentPad = 9;
 
-            if ($.cookie('closePanel') == 'closed') {
-                setTimeout(function () {
-                    var shiftY = (stickyNavHeight - headerContentPad * 2 - $('.header-content').height()) * -1 - 2;
-                    $('.js-quickLinks').css({
-                        'transform': 'translateY(' + shiftY + 'px)'
-                    })
-                    $('.js-quickLinks').addClass('closed')
-                }, 500);
-            }
+        if ($.cookie('closePanel') == 'closed') {
+            setTimeout(function () {
+                var shiftY = (stickyNavHeight - headerContentPad * 2 - $('.header-content').height()) * -1 - 2;
+                $('.js-quickLinks').css({
+                    'transform': 'translateY(' + shiftY + 'px)'
+                })
+                $('.js-quickLinks').addClass('closed')
+            }, 500);
+        }
 
         $.fn.stickyEl.init = function () {
             if (windowWidth > templateOption.mobileMenuBreikpont) {
@@ -164,13 +164,13 @@ $(function () {
                     $stickyForm = new Waypoint.Sticky({
                         element: $('.js-quickLinks')[0],
                         offset: -offset,
-                        handler: function(direction) {
+                        handler: function (direction) {
                             if (direction === 'down') {
                                 $('.js-quickLinks').css({
                                     'opacity': 0
                                 })
                                 setTimeout(function () {
-                                    if ($.cookie('closePanel') == 'closed'){
+                                    if ($.cookie('closePanel') == 'closed') {
                                         var shiftY = (stickyNavHeight - $('.header-content').outerHeight()) * -1 - 2;
                                         $('.js-quickLinks').css({
                                             'transform': 'translateY(' + shiftY + 'px)',
@@ -200,7 +200,7 @@ $(function () {
                     $stickyNav = new Waypoint.Sticky({
                         element: $('.header-content')[0],
                         offset: -48,
-                        handler: function(direction) {
+                        handler: function (direction) {
                             $('body').toggleClass('stickNav')
                         }
                     })
@@ -210,7 +210,7 @@ $(function () {
                     $stickyNav = new Waypoint.Sticky({
                         element: $('.header-content')[0],
                         offset: -35,
-                        handler: function(direction) {
+                        handler: function (direction) {
                             $('body').toggleClass('stickNav')
                         }
                     })
@@ -265,6 +265,7 @@ $(function () {
         options = $.extend({}, options || {}, $this.data('countToOptions') || {});
         $this.countTo(options);
     }
+
     // number counter
     if (blocks.counterBlock.length) {
         blocks.counterBlock.each(function () {
@@ -482,7 +483,7 @@ $(function () {
                     settings: {
                         slidesToShow: 1
                     }
-            }]
+                }]
         });
         blocks.specialCarousel.slick('slickPause');
         blocks.specialCarousel.waypoint({
@@ -511,7 +512,7 @@ $(function () {
                         arrows: false,
                         dots: true,
                     }
-            }]
+                }]
         });
         blocks.reviewsCarousel.slick('slickPause');
         blocks.reviewsCarousel.waypoint({
@@ -589,7 +590,7 @@ $(function () {
                         arrows: false,
                         adaptiveHeight: true
                     }
-            }]
+                }]
         });
     }
 
@@ -608,7 +609,7 @@ $(function () {
                     settings: {
                         slidesToShow: 1
                     }
-            }]
+                }]
         });
     }
 
@@ -628,12 +629,12 @@ $(function () {
                     settings: {
                         slidesToShow: 2
                     }
-            }, {
+                }, {
                     breakpoint: 575,
                     settings: {
                         slidesToShow: 1
                     }
-            }]
+                }]
         });
     }
 
@@ -778,12 +779,12 @@ $(function () {
                     settings: {
                         slidesToShow: 4
                     }
-                    }, {
+                }, {
                     breakpoint: 768,
                     settings: {
                         slidesToShow: 4
                     }
-                    },
+                },
                 {
                     breakpoint: 575,
                     settings: {
@@ -908,25 +909,25 @@ $(function () {
             "stylers": [
                 {
                     "visibility": "off"
-        }
-        ]
+                }
+            ]
         }, {
             "featureType": "poi",
             "elementType": "labels",
             "stylers": [
                 {
                     "visibility": "off"
-        }
-        ]
+                }
+            ]
         }, {
             "featureType": "transit",
             "elementType": "labels.text",
             "stylers": [
                 {
                     "visibility": "off"
-        }
-        ]
-    }];
+                }
+            ]
+        }];
 
     function createMap(id, mapZoom, lat, lng, markers) {
         var mapOptions = {
@@ -957,6 +958,7 @@ $(function () {
             $map.toggleClass('opened');
         })
     }
+
     // Google Map End
 
     // Mobile Top Info
@@ -1013,9 +1015,10 @@ $(function () {
             }
         });
     }
+
     // Header Language dropdown
     function toggleLang(link, drop) {
-        if($(link).length){
+        if ($(link).length) {
             $('.header').addClass('has-lang')
         }
         $('> a', $(link)).on('click', function (e) {
@@ -1030,11 +1033,12 @@ $(function () {
             }
         });
     }
+
     // header menu
     $.fn.headerMenu = function () {
         var that = this;
         $.fn.headerMenu.setToggler = function () {
-            var togglerTop = $('.navbar-toggler').closest('.header-content').outerHeight()*.5 - $('.navbar-toggler').outerHeight()*.5;
+            var togglerTop = $('.navbar-toggler').closest('.header-content').outerHeight() * .5 - $('.navbar-toggler').outerHeight() * .5;
             $('.navbar-toggler').css({'top': togglerTop + 'px'});
             $('.cart-toggler').css({'top': togglerTop + 'px'});
             $('.lang-toggler').css({'top': togglerTop + 'px'});
@@ -1200,7 +1204,7 @@ $(function () {
                 e.stopPropagation();
                 $('.navbar-nav').find('li').removeClass(settings.navActiveClass);
                 link.closest('li').addClass(settings.navActiveClass);
-                if(!$('.navbar-toggler').hasClass('collapsed')) {
+                if (!$('.navbar-toggler').hasClass('collapsed')) {
                     $(".navbar-toggler").trigger('click')
                 }
                 settings.scrollContainer.stop().animate({
@@ -1224,6 +1228,7 @@ $(function () {
             });
         });
     };
+
     // landing navigation
     function landingNav() {
         $('a[href*="#"].link-inside').on('click', function (event) {
@@ -1245,10 +1250,11 @@ $(function () {
             }
         });
     }
+
     // video popup
     function videoPopup(button, modal) {
         var videoSrc;
-        $(button).on('click', function() {
+        $(button).on('click', function () {
             videoSrc = $(this).data('src');
         });
         $(modal).on('shown.bs.modal', function () {
@@ -1267,7 +1273,7 @@ $(function () {
                 $departments.slick('slickGoTo', i);
             })
         });
-        $departments.on('afterChange', function(){
+        $departments.on('afterChange', function () {
             $tabs.children().removeClass('active');
             $tabs.children().eq($('.slick-active', $departments).attr('data-slick-index')).addClass('active');
         });
@@ -1294,9 +1300,9 @@ $(function () {
         });
     }
 
-    function filterCarousel(filter, carousel){
-        $(filter).find('select').on('change', function() {
-            var filterClass =  $(this).val();
+    function filterCarousel(filter, carousel) {
+        $(filter).find('select').on('change', function () {
+            var filterClass = $(this).val();
             $(carousel).slick('slickUnfilter');
             if (filterClass != 'all') {
                 $(carousel).slick('slickFilter', filterClass);
@@ -1352,9 +1358,9 @@ $(function () {
     mobileInfoSlide();
     toggleLang('.header-lang', '.header-lang-dropdown');
 
-    videoPopup('.video-btn','#videoModal');
+    videoPopup('.video-btn', '#videoModal');
     departmentTabs();
-    filterCarousel('.filterCarousel','.js-specialist-carousel');
+    filterCarousel('.filterCarousel', '.js-specialist-carousel');
     landingNav();
 
     $('.navbar-nav').pageScroller();
@@ -1411,298 +1417,290 @@ $(function () {
     }));
 
 })
-       document.getElementById('loadingspinner').style.visibility="hidden";
-function sendmessage()
-   {
-        document.getElementById('loadingspinner').style.visibility="visible";
+document.getElementById('loadingspinner').style.visibility = "hidden";
+
+function sendmessage() {
+    document.getElementById('loadingspinner').style.visibility = "visible";
     var requestname = document.getElementById('requestname').value;
- var requestemail = document.getElementById('requestemail').value;
-  var requestphone = document.getElementById('requestphone').value;
-   var requestservice = document.getElementById('requestservice').value;
+    var requestemail = document.getElementById('requestemail').value;
+    var requestphone = document.getElementById('requestphone').value;
+    var requestservice = document.getElementById('requestservice').value;
     var requestdate = document.getElementById('requestdate').value;
-     var requesttime = document.getElementById('requesttime').value;
-      var requestcomments = document.getElementById('bookingmessage').value;
-      var bookingage = document.getElementById('bookingage').value;
-      if( document.myForm1.requestname.value == ""  ) {
-            document.myForm1.requestname.focus() ;
-            document.myForm1.requestname.style.border = "1px solid red";
-                   document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-         else if( document.myForm1.requestphone.value == "" || isNaN(requestphone) || requestphone.length != 10 ) {
-            document.myForm1.requestphone.focus() ;
-                        document.myForm1.requestphone.style.border = "1px solid red";
-                        alert("Please Enter 10 digit Mobile Number");
-                               document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-          else if( document.myForm1.requestservice.value == "" ) {
-            document.myForm1.requestservice.focus() ;
-                        document.myForm1.requestservice.style.border = "1px solid red";
-                               document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-           else if( document.myForm1.requestdate.value == "" ) {
-            document.myForm1.requestdate.focus() ;
-                        document.myForm1.requestdate.style.border = "1px solid red";
-                               document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-           else if( document.myForm1.requesttime.value == "" ) {
-            document.myForm1.requesttime.focus() ;
-                        document.myForm1.requesttime.style.border = "1px solid red";
-                               document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-           else if( document.myForm1.bookingage.value == "" ) {
-            document.myForm1.bookingage.focus() ;
-                        document.myForm1.bookingage.style.border = "1px solid red";
-                               document.getElementById('loadingspinner').style.visibility="hidden";
-         }
-         else{
-                const url = 'https://pickyassist.com/app/api/v2/push';
+    var requesttime = document.getElementById('requesttime').value;
+    var requestcomments = document.getElementById('bookingmessage').value;
+    var bookingage = document.getElementById('bookingage').value;
+    if (document.myForm1.requestname.value == "") {
+        document.myForm1.requestname.focus();
+        document.myForm1.requestname.style.border = "1px solid red";
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else if (document.myForm1.requestphone.value == "" || isNaN(requestphone) || requestphone.length != 10) {
+        document.myForm1.requestphone.focus();
+        document.myForm1.requestphone.style.border = "1px solid red";
+        alert("Please Enter 10 digit Mobile Number");
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else if (document.myForm1.requestservice.value == "") {
+        document.myForm1.requestservice.focus();
+        document.myForm1.requestservice.style.border = "1px solid red";
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else if (document.myForm1.requestdate.value == "") {
+        document.myForm1.requestdate.focus();
+        document.myForm1.requestdate.style.border = "1px solid red";
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else if (document.myForm1.requesttime.value == "") {
+        document.myForm1.requesttime.focus();
+        document.myForm1.requesttime.style.border = "1px solid red";
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else if (document.myForm1.bookingage.value == "") {
+        document.myForm1.bookingage.focus();
+        document.myForm1.bookingage.style.border = "1px solid red";
+        document.getElementById('loadingspinner').style.visibility = "hidden";
+    } else {
+        const url = 'https://pickyassist.com/app/api/v2/push';
 
-      // var data = JSON.stringify({requestname:requestname,requestemail : requestemail, requestphone: requestphone, requestservice: requestservice,
-    // requestdate : requestdate,requesttime : requesttime});
-     var data = JSON.stringify({token:"7ee419f285947d339fbca6e7a02a0a7cc8c59fd4",priority: "0",
-                                application:"10",
-                                data:[
-                                {number:"09618088333",
-                                 message:"*Dr.Poornima Skin and Laser Clinic Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""},
-                                 {
-      number:'91'+requestphone,
-      message:"*Dr.Poornima Skin and Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:"+requestname+"\nEmail:"+requestemail+"\nMobileNo:"+requestphone+"\nAge:"+bookingage+"\nService:"+requestservice+"\nDate:"+requestdate+"\nTime:"+requesttime+"\nComments:"+requestcomments+""
-    }]});
-                                var xhr = new XMLHttpRequest();
-                                xhr.withCredentials = false;
-                                document.getElementById("reqbutton").disabled = true;
-xhr.addEventListener("readystatechange", function () {
+        // var data = JSON.stringify({requestname:requestname,requestemail : requestemail, requestphone: requestphone, requestservice: requestservice,
+        // requestdate : requestdate,requesttime : requesttime});
+        var data = JSON.stringify({
+            //token: "45e7021d0eb181af89c0bc80a571eafece171cab", priority: "0",
+            token: "a28d024e3fe650aed0517f1fe637adfd651a4e4c", priority: "0",
+            //a28d024e3fe650aed0517f1fe637adfd651a4e4c
+            application: "1",
+            data: [
+                {
+                    number: "09291590151",
+                    message: "*Dr.Poornima Skin and Laser Clinic Appointment Details*\nName:" + requestname + "\nEmail:" + requestemail + "\nMobileNo:" + requestphone + "\nAge:" + bookingage + "\nService:" + requestservice + "\nDate:" + requestdate + "\nTime:" + requesttime + "\nComments:" + requestcomments + ""
+                },
+                {
+                    number: '91' + requestphone,
+                    message: "*Dr.Poornima Skin and Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:" + requestname + "\nEmail:" + requestemail + "\nMobileNo:" + requestphone + "\nAge:" + bookingage + "\nService:" + requestservice + "\nDate:" + requestdate + "\nTime:" + requesttime + "\nComments:" + requestcomments + ""
+                }]
+        });
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        document.getElementById("reqbutton").disabled = true;
+        xhr.addEventListener("readystatechange", function () {
 
-  if (this.readyState === this.DONE) {
+            if (this.readyState === this.DONE) {
 
-              document.getElementById('loadingspinner').style.visibility="hidden";
-    alert("Thank you for booking, your appointment with the Doctor is confirmed.")
-    document.myForm1.bookingage.value='';
-    document.myForm1.requesttime.value='';
-    document.myForm1.requestdate.value='';
-    document.myForm1.requestservice.value='';
-    document.myForm1.requestphone.value='';
-    document.myForm1.requestemail.value='';
-    document.myForm1.requestname.value='';
-    document.myForm1.bookingmessage.value='';
-     document.getElementById("reqbutton").disabled = false;
-  }
-});
+                document.getElementById('loadingspinner').style.visibility = "hidden";
+                alert("Thank you for booking, your appointment with the Doctor is confirmed.")
+                document.myForm1.bookingage.value = '';
+                document.myForm1.requesttime.value = '';
+                document.myForm1.requestdate.value = '';
+                document.myForm1.requestservice.value = '';
+                document.myForm1.requestphone.value = '';
+                document.myForm1.requestemail.value = '';
+                document.myForm1.requestname.value = '';
+                document.myForm1.bookingmessage.value = '';
+                document.getElementById("reqbutton").disabled = false;
+            }
+        });
 
-xhr.open("POST", "https://pickyassist.com/app/api/v2/push",{ mode: "no-cors" });
+        xhr.open("POST", "https://pickyassist.com/app/api/v2/push", {mode: "no-cors"});
 // xhr.setRequestHeader("Content-Type", "application/json");
 // xhr.setRequestHeader("Access-Control-Allow-Origin", "http://akrao.co");
 // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
 
-xhr.set
-xhr.send(data);
+        xhr.set
+        xhr.send(data);
 
 
-        }
-   }
+    }
+}
 
 
+document.getElementById('loadingspinner1').style.visibility = "hidden";
 
-
-
-   document.getElementById('loadingspinner1').style.visibility="hidden";
-   function bookmessage()
-   {
-        document.getElementById('loadingspinner1').style.visibility="visible";
+function bookmessage() {
+    document.getElementById('loadingspinner1').style.visibility = "visible";
     var bookingname = document.getElementById('bookingname').value;
- var bookingemail = document.getElementById('bookingemail').value;
-  var bookingphone = document.getElementById('bookingphone').value;
-   var bookedgage = document.getElementById('bookedgage').value;
-   var bookingservice = document.getElementById('bookingservice').value;
+    var bookingemail = document.getElementById('bookingemail').value;
+    var bookingphone = document.getElementById('bookingphone').value;
+    var bookedgage = document.getElementById('bookedgage').value;
+    var bookingservice = document.getElementById('bookingservice').value;
     var bookingdate = document.getElementById('bookingdate').value;
-     var bookingtime = document.getElementById('bookingtime').value;
-      var bookingcomments = document.getElementById('bookingcomments').value;
+    var bookingtime = document.getElementById('bookingtime').value;
+    var bookingcomments = document.getElementById('bookingcomments').value;
 
-      if( document.myForm2.bookingname.value == ""  ) {
-            document.myForm2.bookingname.focus() ;
-            document.myForm2.bookingname.style.border = "1px solid red";
-            document.getElementById('loadingspinner1').style.visibility="hidden";
-         }
-         else if( document.myForm2.bookingphone.value == "" || isNaN(bookingphone) || bookingphone.length != 10 ) {
-            document.myForm2.bookingphone.focus() ;
-                        document.myForm2.bookingphone.style.border = "1px solid red";
-                        alert("Please Enter 10 digit Mobile Number");
-                        document.getElementById('loadingspinner1').style.visibility="hidden";
-         }
-          else if( document.myForm2.bookedgage.value == "" ) {
-            document.myForm2.bookedgage.focus() ;
-                        document.myForm2.bookedgage.style.border = "1px solid red";
-                        document.getElementById('loadingspinner1').style.visibility="hidden";
-         }
-           else if( document.myForm2.bookingservice.value == "" ) {
-            document.myForm2.bookingservice.focus() ;
-                        document.myForm2.bookingservice.style.border = "1px solid red";
-                        document.getElementById('loadingspinner1').style.visibility="hidden";
-         }
-           else if( document.myForm2.bookingdate.value == "" ) {
-            document.myForm2.bookingdate.focus() ;
-                        document.myForm2.bookingdate.style.border = "1px solid red";
-         }
-           else if( document.myForm2.bookingtime.value == "" ) {
-            document.myForm2.bookingtime.focus() ;
-                        document.myForm2.bookingtime.style.border = "1px solid red";
-                        document.getElementById('loadingspinner1').style.visibility="hidden";
-         }
-         else{
-                const url = 'https://pickyassist.com/app/api/v2/push';
+    if (document.myForm2.bookingname.value == "") {
+        document.myForm2.bookingname.focus();
+        document.myForm2.bookingname.style.border = "1px solid red";
+        document.getElementById('loadingspinner1').style.visibility = "hidden";
+    } else if (document.myForm2.bookingphone.value == "" || isNaN(bookingphone) || bookingphone.length != 10) {
+        document.myForm2.bookingphone.focus();
+        document.myForm2.bookingphone.style.border = "1px solid red";
+        alert("Please Enter 10 digit Mobile Number");
+        document.getElementById('loadingspinner1').style.visibility = "hidden";
+    } else if (document.myForm2.bookedgage.value == "") {
+        document.myForm2.bookedgage.focus();
+        document.myForm2.bookedgage.style.border = "1px solid red";
+        document.getElementById('loadingspinner1').style.visibility = "hidden";
+    } else if (document.myForm2.bookingservice.value == "") {
+        document.myForm2.bookingservice.focus();
+        document.myForm2.bookingservice.style.border = "1px solid red";
+        document.getElementById('loadingspinner1').style.visibility = "hidden";
+    } else if (document.myForm2.bookingdate.value == "") {
+        document.myForm2.bookingdate.focus();
+        document.myForm2.bookingdate.style.border = "1px solid red";
+    } else if (document.myForm2.bookingtime.value == "") {
+        document.myForm2.bookingtime.focus();
+        document.myForm2.bookingtime.style.border = "1px solid red";
+        document.getElementById('loadingspinner1').style.visibility = "hidden";
+    } else {
+        const url = 'https://pickyassist.com/app/api/v2/push';
 
-      // var data = JSON.stringify({requestname:requestname,requestemail : requestemail, requestphone: requestphone, requestservice: requestservice,
-    // requestdate : requestdate,requesttime : requesttime});
-     var data = JSON.stringify({token:"7ee419f285947d339fbca6e7a02a0a7cc8c59fd4",priority: "0",
-                                application:"10",
-                                data:[
-                                {number:"09618088333",
-                                 message:"*Dr.Poornima Skin & Laser Clinic Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""},
-                                 {
-      number:'91'+bookingphone,
-      message:"*Dr.Poornima Skin & Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:"+bookingname+"\nEmail:"+bookingemail+"\nMobileNo:"+bookingphone+"\nAge:"+bookedgage+"\nService:"+bookingservice+"\nDate:"+bookingdate+"\nTime:"+bookingtime+"\nComments:"+bookingcomments+""
-    }]});
-                                var xhr = new XMLHttpRequest();
-                                xhr.withCredentials = false;
-                                document.getElementById("bokkingbutton").disabled = true;
-xhr.addEventListener("readystatechange", function () {
+        // var data = JSON.stringify({requestname:requestname,requestemail : requestemail, requestphone: requestphone, requestservice: requestservice,
+        // requestdate : requestdate,requesttime : requesttime});
+        var data = JSON.stringify({
+            token: "a28d024e3fe650aed0517f1fe637adfd651a4e4c", priority: "0",
+            application: "1",
+            data: [
+                {
+                    number: "09291590151",
+                    message: "*Dr.Poornima Skin & Laser Clinic Appointment Details*\nName:" + bookingname + "\nEmail:" + bookingemail + "\nMobileNo:" + bookingphone + "\nAge:" + bookedgage + "\nService:" + bookingservice + "\nDate:" + bookingdate + "\nTime:" + bookingtime + "\nComments:" + bookingcomments + ""
+                },
+                {
+                    number: '91' + bookingphone,
+                    message: "*Dr.Poornima Skin & Laser Clinic Appointment* \n*Doctor Appointment Details*\nName:" + bookingname + "\nEmail:" + bookingemail + "\nMobileNo:" + bookingphone + "\nAge:" + bookedgage + "\nService:" + bookingservice + "\nDate:" + bookingdate + "\nTime:" + bookingtime + "\nComments:" + bookingcomments + ""
+                }]
+        });
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        document.getElementById("bokkingbutton").disabled = true;
+        xhr.addEventListener("readystatechange", function () {
 
-  if (this.readyState === this.DONE) {
-      document.getElementById('loadingspinner1').style.visibility="hidden";
-    alert("Thank you for booking, your appointment with the Doctor is confirmed.")
-    document.myForm2.bookedgage.value='';
-    document.myForm2.bookingtime.value='';
-    document.myForm2.bookingdate.value='';
-    document.myForm2.bookingservice.value='';
-    document.myForm2.bookingphone.value='';
-    document.myForm2.bookingemail.value='';
-    document.myForm2.bookingname.value='';
-    document.myForm2.bookingcomments.value='';
-    document.getElementById("bokkingbutton").disabled = false;
-  }
-});
+            if (this.readyState === this.DONE) {
+                document.getElementById('loadingspinner1').style.visibility = "hidden";
+                alert("Thank you for booking, your appointment with the Doctor is confirmed.")
+                document.myForm2.bookedgage.value = '';
+                document.myForm2.bookingtime.value = '';
+                document.myForm2.bookingdate.value = '';
+                document.myForm2.bookingservice.value = '';
+                document.myForm2.bookingphone.value = '';
+                document.myForm2.bookingemail.value = '';
+                document.myForm2.bookingname.value = '';
+                document.myForm2.bookingcomments.value = '';
+                document.getElementById("bokkingbutton").disabled = false;
+            }
+        });
 
-xhr.open("POST", "https://pickyassist.com/app/api/v2/push",{ mode: "no-cors" });
+        xhr.open("POST", "https://pickyassist.com/app/api/v2/push", {mode: "no-cors"});
 
-xhr.set
-xhr.send(data);
+        xhr.set
+        xhr.send(data);
 
 
-        }
-   }
+    }
+}
 
 1595
 
 
+var customers = [
+    {ServiceId: "Acne (Pimples) / Scars and Marks", Name: "Acne (Pimples) / Scars and Marks"},
+    {ServiceId: "Pigmentation", Name: "Pigmentation"},
+    {ServiceId: "Psoriasis / Vitiligo", Name: "Psoriasis / Vitiligo"},
+    {ServiceId: "Eczema / Skin Allergy", Name: "Eczema / Skin Allergy"},
+    {ServiceId: "Laser", Name: "Laser"},
+    {ServiceId: "Nail Problems", Name: "Nail Problems"},
+    {ServiceId: "Dark Circles / Skin Rejuvenation", Name: "Dark Circles / Skin Rejuvenation"},
+    {ServiceId: "Moles, Warts, Tags Removal", Name: "Moles, Warts, Tags Removal"},
+    {ServiceId: "Laser", Name: "Laser"},
+    {ServiceId: "Dermatosurgeries", Name: "Dermatosurgeries"},
+];
+var vrequestservice = document.getElementById("vrequestservice");
 
-  var customers = [
-                { ServiceId: "Acne (Pimples) / Scars and Marks", Name: "Acne (Pimples) / Scars and Marks"},
-                { ServiceId: "Pigmentation", Name: "Pigmentation"},
-                { ServiceId: "Psoriasis / Vitiligo", Name: "Psoriasis / Vitiligo"},
-                { ServiceId: "Eczema / Skin Allergy", Name: "Eczema / Skin Allergy"},
-		{ ServiceId: "Hair Fall / Baldness Treatment", Name: "Hair Fall / Baldness Treatment"},
-                { ServiceId: "Nail Problems", Name: "Nail Problems"},
-                { ServiceId: "Dark Circles / Skin Rejuvenation", Name: "Dark Circles / Skin Rejuvenation"},
-                { ServiceId: "Moles, Warts, Tags Removal", Name: "Moles, Warts, Tags Removal"},
-		 { ServiceId: "Unwanted Hair Removal", Name: "Unwanted Hair Removal"},
-                { ServiceId: "Dermatosurgeries", Name: "Dermatosurgeries"},
-            ];
-			var vrequestservice = document.getElementById("vrequestservice");
-           
-            //Add the Options to the DropDownList.
-            for (var i = 0; i < customers.length; i++) {
-                var option = document.createElement("OPTION");
- 
-                //Set Customer Name in Text part.
-                option.innerHTML = customers[i].Name;
- 
-                //Set CustomerId in Value part.
-                option.value = customers[i].ServiceId;
- 
-                //Add the Option element to DropDownList.
-                vrequestservice.options.add(option);
-            }
-			
-   
-          document.getElementById('loadingspinner2').style.visibility="hidden";
-   
-   //appointment for call 
-   function sendmessageforvideocall()
-   {
-        document.getElementById('loadingspinner2').style.visibility="visible";
+//Add the Options to the DropDownList.
+for (var i = 0; i < customers.length; i++) {
+    var option = document.createElement("OPTION");
+
+    //Set Customer Name in Text part.
+    option.innerHTML = customers[i].Name;
+
+    //Set CustomerId in Value part.
+    option.value = customers[i].ServiceId;
+
+    //Add the Option element to DropDownList.
+    vrequestservice.options.add(option);
+}
+
+
+document.getElementById('loadingspinner2').style.visibility = "hidden";
+
+//appointment for call
+function sendmessageforvideocall() {
+    document.getElementById('loadingspinner2').style.visibility = "visible";
     var vbookingname = document.getElementById('vbookingname').value;
- var vbookingemail = document.getElementById('vbookingemail').value;
-  var vbookingphone = document.getElementById('vbookingphone').value;
-   var vrequestage = document.getElementById('vrequestage').value;
-   var vrequestservice = document.getElementById('vrequestservice').value;
+    var vbookingemail = document.getElementById('vbookingemail').value;
+    var vbookingphone = document.getElementById('vbookingphone').value;
+    var vrequestage = document.getElementById('vrequestage').value;
+    var vrequestservice = document.getElementById('vrequestservice').value;
     var vbookingdate = document.getElementById('vbookingdate').value;
-	var vbookingtime = document.getElementById('vbookingtime').value;
-      var vbookingcomments = document.getElementById('vbookingcomments').value;
+    var vbookingtime = document.getElementById('vbookingtime').value;
+    var vbookingcomments = document.getElementById('vbookingcomments').value;
 
-      if( document.myFormvideo.vbookingname.value == ""  ) {
-            document.myFormvideo.vbookingname.focus() ;
-            document.myFormvideo.vbookingname.style.border = "1px solid red";
-            document.getElementById('loadingspinner2').style.visibility="hidden";
-         }
-         else if( document.myFormvideo.vbookingphone.value == "" || isNaN(vbookingphone) || vbookingphone.length != 10 ) {
-            document.myFormvideo.vbookingphone.focus() ;
-                        document.myFormvideo.vbookingphone.style.border = "1px solid red";
-                        alert("Please Enter 10 digit Mobile Number");
-                        document.getElementById('loadingspinner2').style.visibility="hidden";
-         }
-          else if( document.myFormvideo.vrequestage.value == "" ) {
-            document.myFormvideo.vrequestage.focus() ;
-                        document.myFormvideo.vrequestage.style.border = "1px solid red";
-                        document.getElementById('loadingspinner2').style.visibility="hidden";
-         }
-           else if( document.myFormvideo.vrequestservice.value == "" ) {
-            document.myFormvideo.vrequestservice.focus() ;
-                        document.myFormvideo.vrequestservice.style.border = "1px solid red";
-                        document.getElementById('loadingspinner2').style.visibility="hidden";
-         }
-           else if( document.myFormvideo.vbookingdate.value == "" ) {
-            document.myFormvideo.vbookingdate.focus() ;
-                        document.myFormvideo.vbookingdate.style.border = "1px solid red";
-         }
-         else{
-                const url = 'https://pickyassist.com/app/api/v2/push';
-     var data = JSON.stringify({token:"7ee419f285947d339fbca6e7a02a0a7cc8c59fd4",priority: "0",
-                                application:"10",
-                                data:[
-                                {number:"09618088333",
-                                 message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation  Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""},
-                                 {
-      number:'91'+vbookingphone,
-      message:"Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation Details*\nName:"+vbookingname+"\nEmail:"+vbookingemail+"\nMobileNo:"+vbookingphone+"\nAge:"+vrequestage+"\nPurpose:"+vrequestservice+"\nDate:"+vbookingdate+"\nTime:"+vbookingtime+"\nComments:"+vbookingcomments+""
-    }]});
-                                var xhr = new XMLHttpRequest();
-                                xhr.withCredentials = false;
-                                document.getElementById("videoreqbutton").disabled = true;
-xhr.addEventListener("readystatechange", function () {
+    if (document.myFormvideo.vbookingname.value == "") {
+        document.myFormvideo.vbookingname.focus();
+        document.myFormvideo.vbookingname.style.border = "1px solid red";
+        document.getElementById('loadingspinner2').style.visibility = "hidden";
+    } else if (document.myFormvideo.vbookingphone.value == "" || isNaN(vbookingphone) || vbookingphone.length != 10) {
+        document.myFormvideo.vbookingphone.focus();
+        document.myFormvideo.vbookingphone.style.border = "1px solid red";
+        alert("Please Enter 10 digit Mobile Number");
+        document.getElementById('loadingspinner2').style.visibility = "hidden";
+    } else if (document.myFormvideo.vrequestage.value == "") {
+        document.myFormvideo.vrequestage.focus();
+        document.myFormvideo.vrequestage.style.border = "1px solid red";
+        document.getElementById('loadingspinner2').style.visibility = "hidden";
+    } else if (document.myFormvideo.vrequestservice.value == "") {
+        document.myFormvideo.vrequestservice.focus();
+        document.myFormvideo.vrequestservice.style.border = "1px solid red";
+        document.getElementById('loadingspinner2').style.visibility = "hidden";
+    } else if (document.myFormvideo.vbookingdate.value == "") {
+        document.myFormvideo.vbookingdate.focus();
+        document.myFormvideo.vbookingdate.style.border = "1px solid red";
+    } else {
+        const url = 'https://pickyassist.com/app/api/v2/push';
+        var data = JSON.stringify({
+            token: "a28d024e3fe650aed0517f1fe637adfd651a4e4c", priority: "0",
+            application: "1",
+            data: [
+                {
+                    number: "09291590151",
+                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation  Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
+                },
+                {
+                    number: '91' + vbookingphone,
+                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
+                }]
+        });
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = false;
+        document.getElementById("videoreqbutton").disabled = true;
+        xhr.addEventListener("readystatechange", function () {
 
-  if (this.readyState === this.DONE) {
-      document.getElementById('loadingspinner1').style.visibility="hidden";
-    alert("Thank you for booking, your appointment with the Doctor is confirmed.");
-	$("#exampleModal").modal('hide');
-    document.myFormvideo.vbookingname.value='';
-    document.myFormvideo.vbookingemail.value='';
-    document.myFormvideo.vbookingphone.value='';
-    document.myFormvideo.vrequestage.value='';
-    document.myFormvideo.vrequestservice.value='';
-    document.myFormvideo.vbookingdate.value='';
-    document.myFormvideo.vbookingcomments.value='';
-    document.getElementById("videoreqbutton").disabled = false;
-  }
-});
+            if (this.readyState === this.DONE) {
+                document.getElementById('loadingspinner1').style.visibility = "hidden";
+                alert("Thank you for booking, your appointment with the Doctor is confirmed.");
+                $("#exampleModal").modal('hide');
+                document.myFormvideo.vbookingname.value = '';
+                document.myFormvideo.vbookingemail.value = '';
+                document.myFormvideo.vbookingphone.value = '';
+                document.myFormvideo.vrequestage.value = '';
+                document.myFormvideo.vrequestservice.value = '';
+                document.myFormvideo.vbookingdate.value = '';
+                document.myFormvideo.vbookingcomments.value = '';
+                document.getElementById("videoreqbutton").disabled = false;
+            }
+        });
 
-xhr.open("POST", "https://pickyassist.com/app/api/v2/push",{ mode: "no-cors" });
+        xhr.open("POST", "https://pickyassist.com/app/api/v2/push", {mode: "no-cors"});
 
-xhr.set
-xhr.send(data);
-
-
-        }
-   }
+        xhr.set
+        xhr.send(data);
 
 
-  //video consultation 
+    }
+}
+
+
+//video consultation
