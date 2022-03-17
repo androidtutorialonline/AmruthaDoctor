@@ -1666,11 +1666,11 @@ function sendmessageforvideocall() {
             data: [
                 {
                     number: "09291590151",
-                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation  Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
+                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 8341665488 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation  Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
                 },
                 {
                     number: '91' + vbookingphone,
-                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 9618088333 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
+                    message: "Thank you for booking. To confirm your Video Consultation please pay Rs 300 to 8341665488 or UPI ID anu.reddy.edavalli@okhdfcbank through any UPI like GPay, PhonePe, Paytm etc.\n \n*Dr.Poornima Video Consultation Details*\nName:" + vbookingname + "\nEmail:" + vbookingemail + "\nMobileNo:" + vbookingphone + "\nAge:" + vrequestage + "\nPurpose:" + vrequestservice + "\nDate:" + vbookingdate + "\nTime:" + vbookingtime + "\nComments:" + vbookingcomments + ""
                 }]
         });
         var xhr = new XMLHttpRequest();
